@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/images/background1.avif);
+    background-size: cover;
+    /* object-fit: cover; */
+    background-position: center;
+    /* opacity: 0.5; */
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: pink; */
+    height: 21%;
+    width: 85%;
+    background: transparent;
+    gap: 3%;
+    margin-right: 3rem;
+}
+
+.navbar img{
+    height: 15%;
+    /* width: 15%; */
+    border-radius: 50%;
+    /* justify-content: start; */
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    cursor: pointer;
+}
+.navbar li{
+    list-style: none;
+    gap: 50px;
+    position: relative;
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(189, 183, 183);
+
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.navbar li a{
+    color: white;
+
+}  
+.navbar li ::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.5s;
+}
+
+.navbar li:hover ::after{
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    /* height: 78%; */
+    width: 90%;
+    position: absolute;
+    top :45%;
+    /* background-color: pink; */
+    color: white;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.content h1{
+    font-size: 4rem;
+    margin: 3rem;
+
+}
+.content p{
+    width: 36rem;
+    /* margin: auto 1rem; */
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 10rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0.7rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    border: 2px solid orange;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: orange;
+    height: 100%;
+    width: 0;
+    border-radius: 1.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+
